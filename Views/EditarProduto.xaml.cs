@@ -1,4 +1,4 @@
-using MauiAppMinhasCompras.Models;
+﻿using MauiAppMinhasCompras.Models;
 
 namespace MauiAppMinhasCompras.Views;
 
@@ -32,7 +32,7 @@ public partial class EditarProduto : ContentPage
             produto_anexado.Quantidade = Convert.ToDouble(txt_quantidade.Text);
             produto_anexado.Preco = Convert.ToDouble(txt_preco.Text);
 
-            // ? Captura a nova categoria do Picker
+            // ✅ Captura a nova categoria do Picker
             produto_anexado.Categoria = picker_categoria.SelectedItem?.ToString() ?? "Sem Categoria";
 
             await App.Db.Update(produto_anexado);
